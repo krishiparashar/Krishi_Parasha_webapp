@@ -1,0 +1,296 @@
+.common-table {
+  background-color: $grey;
+  color: $dimGrey;
+  .common-table__thead {
+    tr {
+      font-family: $opensans-semiBold;
+      font-size: $fs-12px;
+      background-color: $gainsboro-white;
+      color: $dimGrey;
+      th {
+        @include setPadding(
+          $fs-6px !important,
+          $fs-6px !important,
+          $fs-6px !important,
+          $fs-6px !important
+        );
+        border-bottom-width: 0 !important;
+        column-span: 2;
+      }
+    }
+  }
+
+  .common-table__tbody {
+    tr {
+      font-family: $opensans-semiBold;
+      font-size: $fs-12px;
+      color: $dimGrey;
+      cursor: pointer;
+      &:nth-child(2n) > td{
+        border: none !important;
+        cursor:  pointer !important;
+        background-color: $smoke-white !important;
+      }
+      &:nth-child(2n+1)>td{
+        cursor:  pointer !important;
+        border: none !important;
+        background-color: $white !important;
+      }
+    }
+  }
+}
+.table-responsive {
+  overflow-x: hidden;
+  @include mobileScreen {
+    overflow-x: auto;
+  }
+}
+
+.common-border-table-none {
+  font-family: $opensans-semiBold;
+  color: $charcoal-grey;
+  font-size: $fs-12px;
+  background-color: $sliver-grey;
+  text-transform: uppercase;
+  tr {
+    th {
+      border: none !important;
+    }
+    &:hover > td {
+      background-color: $white !important;
+    }
+  }
+}
+.common-border-table-tbody-none {
+  font-family: $opensans-regular;
+  color: $black;
+  font-size: $fs-12px;
+  tr {
+    td {
+      border-style: solid;
+      border-color: $white;
+      vertical-align: middle;
+    }
+    &:nth-child(0) > td{
+      background-color: $smoke-white !important;
+    }
+    &:nth-child(2n+1)>td{
+      background-color: $smoke-light-white !important;
+    }
+    &:hover > td{
+      background-color: $reef-gold !important;
+    }
+  }
+}
+
+.common-table-position--small{
+  min-width: $fs-32px;
+  max-width: $fs-32px;
+  width: 6rem;
+}
+
+.common-table-admin {
+  background-color: $blue-light;
+  color: $charcoal-grey;
+  .common-table-admin__thead {
+    tr {
+      font-family: $opensans-semiBold;
+      font-size: $fs-12px;
+      background-color: $blue-light;
+      color: $charcoal-grey;
+      text-align: center;
+      th {
+        @include setPadding(
+          $fs-6px !important,
+          $fs-6px !important,
+          $fs-6px !important,
+          $fs-6px !important
+        );
+        border: 2px solid $sliver-grey !important;
+        border-top-width: 0 !important;
+        border-bottom-width: 0 !important;
+        &:first-child{
+          border-left: 0 !important;
+        }
+        &:last-child{
+          border-right: 0 !important;
+        }
+      }
+    }
+  }
+
+  .common-table-admin__tbody {
+    tr {
+      font-family: $opensans-regular;
+      font-size: $fs-12px;
+      color: $dimGrey;
+      text-align: center;
+      td {
+        vertical-align: middle;
+        border: 2px solid $sliver-grey !important;
+        &:last-child{
+          border-right: 0 !important;
+        }
+        &:first-child{
+          border-left: 0 !important;
+        }
+      }
+      &:nth-child(2n) > td{
+        cursor:  pointer !important;
+        background-color: $smoke-white !important;
+      }
+      &:nth-child(2n+1)>td{
+        cursor:  pointer !important;
+        background-color: $white !important;
+      }
+    }
+  }
+}
+
+
+.common-table-admin-border {
+  background-color: $blue-light;
+  color: $charcoal-grey;
+  .common-table-admin-border__thead {
+    tr {
+      font-family: $opensans-semiBold;
+      font-size: $fs-12px;
+      background-color: $blue-light;
+      color: $charcoal-grey;
+      text-align: center;
+      th {
+        @include setPadding(
+          $fs-6px !important,
+          $fs-6px !important,
+          $fs-6px !important,
+          $fs-6px !important
+        );
+        border: 3px solid $white !important;
+        border-top-width: 0 !important;
+        border-bottom-width: 0 !important;
+        &:first-child{
+          border-left: 0 !important;
+        }
+        &:last-child{
+          border-right: 0 !important;
+        }
+      }
+    }
+  }
+
+  .common-table-admin-border__tbody {
+    tr {
+      font-family: $opensans-regular;
+      font-size: $fs-12px;
+      color: $dimGrey;
+      text-align: center;
+      td {
+        vertical-align: middle;
+        border: 3px solid $white !important;
+        &:last-child{
+          border-right: 0 !important;
+        }
+        &:first-child{
+          border-left: 0 !important;
+        }
+      }
+      &:nth-child(2n) > td{
+        cursor:  pointer !important;
+        background-color: $smoke-white !important;
+      }
+      &:nth-child(2n+1)>td{
+        cursor:  pointer !important;
+        background-color: $white !important;
+      }
+    }
+  }
+}
+
+.rdt_Table{
+  height: auto !important;
+}
+
+.rdt_TableHeader {
+  display: none !important;
+}
+
+.data-table-container {
+  .rdt_TableHeader {
+    display: block !important;
+  }
+}
+
+.rdt_TableCol_Sortable{
+  width: 100% !important;
+  text-align: center !important;
+  div {
+    width: 100% !important; 
+  }
+}
+
+.rdt_Pagination {
+  svg{
+  width: 20px !important;
+  height: 20px !important;
+  }
+}
+
+
+
+.common-table-radiologist-border {
+  background-color: $blue-light;
+  color: $charcoal-grey;
+  .common-table-radiologist-border__thead {
+    tr {
+      font-family: $opensans-semiBold;
+      font-size: $fs-12px;
+      background-color: $blue-light;
+      color: $charcoal-grey;
+      text-align: center;
+      th {
+        @include setPadding(
+          $fs-6px !important,
+          $fs-6px !important,
+          $fs-6px !important,
+          $fs-6px !important
+        );
+        border: 1px solid $white !important;
+        border-top-width: 1 !important;
+        border-bottom-width: 1 !important;
+        &:first-child{
+          border-left: 1 !important;
+        }
+        &:last-child{
+          border-right: 1 !important;
+        }
+      }
+    }
+  }
+
+  .common-table-radiologist-border__tbody {
+    tr {
+      font-family: $opensans-regular;
+      font-size: $fs-12px;
+      color: $black;
+      text-align: center;
+      td {
+        vertical-align: middle;
+        border: 1px solid $grey !important;
+        &:last-child{
+          border-right: 1 !important;
+        }
+        &:first-child{
+          border-left: 1 !important;
+        }
+      }
+      &:nth-child(2n) > td{
+        cursor:  pointer !important;
+        background-color: $smoke-white !important;
+      }
+      &:nth-child(2n+1)>td{
+        cursor:  pointer !important;
+        background-color: $white !important;
+      }
+    }
+  }
+}

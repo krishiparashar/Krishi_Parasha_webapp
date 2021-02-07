@@ -1,0 +1,26 @@
+@import "./common";
+@import "./fonts";
+@import "./colors";
+@import "./bootstrap-overrides";
+@import "./typography";
+@import "./form";
+@import "./button";
+@import "./date-picker-overrides";
+@import "./table";
+@import "./margins_and_paddings";
+@import "./internal_common";
+@import "./select-dropdown-overrides";
+@import "./swal-modal";
+@import "./radio_button";
+@import "./custom_checkbox";
+
+@import '../ui/customPages/customPages';
+@import '../ui/customComponent/customComponent';
+
+
+//dc app stylesheets
+@import '../dcReceptionist/customPages/customPages';
+@import '../dcReceptionist/customComponent/customComponent';
+
+//admin stylesheets
+@import '../svaasAdmin/customPages/customPages';

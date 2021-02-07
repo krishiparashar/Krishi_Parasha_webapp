@@ -1,0 +1,177 @@
+@import "colors";
+@import "mixins";
+@import "fonts";
+
+.custom-theme-btn {
+  font-family: $opensans-semiBold;
+  font-size: $fs-16px !important;
+  border-radius: $fs-4px !important;
+  @include setFont(500, normal, normal, normal, center);
+  @include setPadding(
+    $fs-8px !important,
+    $fs-20px !important,
+    $fs-8px !important,
+    $fs-20px !important
+  );
+  @include setBtnColor(
+    $navyBlue !important,
+    $navyBlue !important,
+    $white !important
+  );
+  &:hover {
+    @include setBtnColor(
+      $white !important,
+      $white !important,
+      $navyBlue !important
+    );
+    border-color: $navyBlue !important;
+  }
+  &:focus {
+    box-shadow: none !important;
+    @include setBtnColor(
+      $navyBlue !important,
+      $navyBlue !important,
+      $white !important
+    );
+    border-color: $navyBlue !important;
+    outline: none !important;
+  }
+  &:disabled {
+    @include setBtnColor(
+      $chateauGreyColor !important,
+      $chateauGreyColor !important,
+      $white !important
+    );
+    cursor: not-allowed;
+    border-color: $chateauGreyColor !important;
+  }
+}
+
+.custom-theme-btn-transparent {
+  @include setBtnColor(
+    $transparent !important,
+    $transparent !important,
+    $navyBlue !important
+  );
+  border-color: $transparent !important;
+
+  &:hover {
+    @include setBtnColor(
+      $transparent !important,
+      $transparent !important,
+      $navyBlue !important
+    );
+    border-color: $transparent !important;
+  }
+  &:focus {
+    @include setBtnColor(
+      $transparent !important,
+      $navyBlue !important,
+      $navyBlue !important
+    );
+    border-color: $transparent !important;
+    box-shadow: none !important;
+  }
+  &:disabled {
+    @include setBtnColor(
+      $transparent !important,
+      $transparent !important,
+      $navyBlue !important
+    );
+    cursor: not-allowed;
+    border-color: $transparent !important;
+  }
+}
+
+.custom-theme-btn-outline {
+  @include setBtnColor(
+    $transparent !important,
+    $transparent !important,
+    $navyBlue !important
+  );
+  border-color: $navyBlue !important;
+
+  &:hover {
+    @include setBtnColor(
+      $transparent !important,
+      $transparent !important,
+      $navyBlue !important
+    );
+    border-color: $navyBlue !important;
+  }
+  &:focus {
+    @include setBtnColor(
+      $transparent !important,
+      $navyBlue !important,
+      $navyBlue !important
+    );
+    border-color: $navyBlue !important;
+    box-shadow: none !important;
+  }
+  &:disabled {
+    @include setBtnColor(
+      $transparent !important,
+      $transparent !important,
+      $navyBlue !important
+    );
+    cursor: not-allowed;
+    border-color: $navyBlue !important;
+  }
+}
+
+
+
+.custom-theme-btn--small{
+  font-size: $fs-12px !important;
+  @include setPadding(
+    $fs-8px !important,
+    $fs-14px !important,
+    $fs-8px !important,
+    $fs-14px !important
+  ); 
+}
+
+.custom-danger-btn{
+  font-family: $opensans-semiBold;
+  font-size: $fs-16px !important;
+  border-radius: $fs-4px !important;
+  @include setFont(500, normal, normal, normal, center);
+  @include setPadding(
+    $fs-8px !important,
+    $fs-20px !important,
+    $fs-8px !important,
+    $fs-20px !important
+  );
+  @include setBtnColor(
+    $danger !important,
+    $danger !important,
+    $white !important
+  );
+  &:hover {
+    @include setBtnColor(
+      $white !important,
+      $white !important,
+      $danger !important
+    );
+    border-color: $danger !important;
+  }
+  &:focus {
+    box-shadow: none !important;
+    @include setBtnColor(
+      $danger !important,
+      $danger !important,
+      $white !important
+    );
+    border-color: $danger !important;
+    outline: none !important;
+  }
+  &:disabled {
+    @include setBtnColor(
+      $danger !important,
+      $danger !important,
+      $white !important
+    );
+    cursor: not-allowed;
+    border-color: $danger !important;
+  } 
+}

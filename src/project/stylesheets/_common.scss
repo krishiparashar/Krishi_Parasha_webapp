@@ -1,0 +1,137 @@
+/*--------------------------------------------------------------
+	Common
+--------------------------------------------------------------*/
+
+@import "screen-sizes";
+@import "mixins";
+@import "fonts";
+@import "colors";
+
+:root {
+  font-size: $fs-16px; // 16px standard size
+  // Control the font size across all screens based on
+  // root font size
+  //xsmall is for screen size less than 320px
+  @include xsmall {
+    font-size: $fs-12px;
+  }
+  //phone is for screen sizes 320px to 409px
+  @include phone {
+    font-size: $fs-12px;
+  }
+  //iphone is from 410px to 499px
+  @include iphone {
+    font-size: $fs-16px;
+  }
+  //phablet is from 500px to 649px
+  @include phablet {
+    font-size: $fs-16px;
+  }
+  //tablet is from 650px to 767px
+  @include tablet {
+    font-size: $fs-18px;
+  }
+  //desktop is from 768px to 1023px
+  @include desktop {
+    font-size: $fs-14px;
+  }
+  //ipad is from 1024px to 1365px
+  @include iPad {
+    font-size: $fs-14px;
+  }
+  //hdRes is from 1366px to 1919px
+  @include hdRes {
+    font-size: $fs-15px;
+  }
+  //hdResSmall is from 1920px to 2435px
+  @include hdResSmall {
+    font-size: $fs-20px;
+  }
+  //hdResMedium is from 2436px to 3838px
+  @include hdResMedium {
+    font-size: $fs-28px;
+  }
+  //hdResLarge is from 3840px
+  @include hdResLarge {
+    font-size: $fs-36px;
+  }
+}
+
+html {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -ms-overflow-style: scrollbar;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  background-color: $white !important;
+  -webkit-box-shadow: 0 0 0px 1000px $white inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+//scrollbar
+
+.scoll-bar::-webkit-scrollbar {
+  width: $fs-8px;
+  height: $fs-8px;
+  background-color: $transparent;
+  border-radius: $fs-4px;
+}
+.scoll-bar::-webkit-scrollbar-thumb {
+  background-color: $spindle-blue;
+  border-radius: $fs-8px;
+}
+.scoll-bar::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 $fs-4px $spindle-blue !important;
+  box-shadow: inset 0 0 $fs-4px $spindle-blue !important;
+  background-color: $transparent;
+  border-radius: $fs-8px;
+}
+
+::-webkit-scrollbar {
+  width: $fs-4px;
+  height: $fs-4px;
+  background-color: $transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $spindle-blue;
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 $fs-2px $spindle-blue !important;
+  box-shadow: inset 0 0 $fs-2px $spindle-blue !important;
+  background-color: $transparent;
+}
+
+.no-mobile--padding {
+  @include mobileScreen {
+    @include setPadding(0 !important, 0 !important, 0 !important, 0 !important);
+  }
+}
+.no-mobile-plr {
+  @include mobileScreen {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+.no-mobile--margin {
+  @include mobileScreen {
+    @include setMargin(0 !important, 0 !important, 0 !important, 0 !important);
+  }
+}
+
+.no-mobile-mlr {
+  @include mobileScreen {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+.loader--style{
+  height: 85vh;
+}

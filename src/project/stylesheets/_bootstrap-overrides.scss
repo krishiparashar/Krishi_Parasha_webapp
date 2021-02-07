@@ -1,0 +1,39 @@
+.col-no--padding {
+  padding: 0 !important;
+}
+
+img {
+  width: 100%;
+}
+
+.no-margin {
+  @include setMargin(0 !important, 0 !important, 0 !important, 0 !important);
+}
+
+.col-no--padding {
+  @include setPadding(0 !important, 0 !important, 0 !important, 0 !important);
+}
+
+a{
+  color: $dodger-blue !important;
+  &:hover{
+    text-decoration: none !important;
+  }
+  &.disabled{
+    pointer-events: none;
+    cursor: default;
+  }
+}
+
+.fa-2x {
+  font-size: 1.5em !important;
+  @include mobileScreen{
+    font-size: $fs-32px !important;
+  }
+}
+
+.modal-header{
+  .close{
+    outline: none !important;
+  }
+}
